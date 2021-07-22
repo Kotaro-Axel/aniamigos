@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aniamigos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/litera/bootstrap.min.css" integrity="sha384-enpDwFISL6M3ZGZ50Tjo8m65q06uLVnyvkFO3rsoW0UC15ATBFz3QEhr3hmxpYsn" crossorigin="anonymous">
+    <link rel="stylesheet" href="../style/main.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-info">
+        <div class="container-fluid">
+        <a class="navbar-brand ml-5" href="#">Aniamigos</a>
+        <img src="../assets/nav-icon.png" width="30" height="30" alt="">
+            
+            <div class="collapse navbar-collapse" id="navbarColor01">   
+                <ul class="navbar-nav links">
+                    <li class="nav-item p-2 ml-md-5">
+                        <span><a class=" nav-link mr-5" href="../index.html">Home</a></span>
+                    </li>
+                    <li class="nav-item p-2">
+                        <span><a class="nav-link active" href="#">Registro</a></span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>    
+
+    <div class="container text-lg-center mt-lg-5 checked">
+        <button id="servicio" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal">Elige tu Servicio</button>
+    </div>
+
+    <div class="container text-lg-center mt-lg-3">
+        <h2>¡Registrate!</h2>
+        <div class="container">
+            <div class="row text justify-content-center">           
+                <form class="d-flex p-1">
+                    <div>
+                        <div class="form-group">
+                            <label class="form-check-label" for="Tu Nombre">Nombre</label>
+                            <input class="form-control" type="text" name="nombre" id="nombres" aria-describedby="Tu Nombre" placeholder="Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-check-label" for="Tus Apellidos">Apellidos</label>
+                            <input class="form-control" type="text" name="apellidos" id="apellidos" aria-describedby="Tus Apellidos" placeholder="Apellidos" required>
+                        </div>
+                        <div class="form-Dirección">
+                            <label class="form-check-label" for="Tu Direccion">Direccion</label>
+                            <input class="form-control" type="text" name="direccion" id="direccion" aria-describedby="Tu Direccion" placeholder="Direccion" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-check-label" for="Tu Telefono">Telefono</label>
+                            <input class="form-control" type="text" name="telefono" id="telefono" aria-describedby="Tu Telefono" placeholder="Telefono" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-check-label" for="Tu Email">Email</label>
+                            <input class="form-control" type="text" name="mail" id="mail" aria-describedby="Tu Email" placeholder="Email@" required>
+                        </div>
+                    </div>          
+                    <div class="ml-lg-5">
+                        <div class="form-group">
+                            <label class="form-check-label" for="Mascota">Nombre de Mascota</label>
+                            <input class="form-control" type="text" name="nombreMascota" id="nombreMascota" aria-describedby="Nombre" placeholder="Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-check-label" for="Edad">Edad</label>
+                            <input class="form-control" type="number" name="edadMascota" id="edadMascota" aria-describedby="Edad" placeholder="Nombre" required>
+                        </div>
+                        <div class="form-Dirección">
+                            <label class="form-check-label" for="Croquetas">Comifa Favorita</label>
+                            <input class="form-control" type="text" name="comidas" id="comidas" aria-describedby="Comida fav" placeholder="Nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-check-label" for="Alergias">Alergias</label>
+                            <input class="form-control" type="text" name="alergias" id="alergias" aria-describedby="Alergias" placeholder="Nombre" required>
+                        </div>
+                        <button type="button" id="onRegister" class="btn btn-info btn-block">Realizar Registro</button>
+                    </div>                  
+                </form>           
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="modal" class="modal" tabindex="-1" role="dialog">    
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">          
+                <div class="modal-header">
+                    <h5>Elige tu Servicio</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group d-flex p-1">
+                            <div class="form-check">
+                                <img src="../assets/perro.svg" width="40" height="40" alt="perrito">
+                                <input class="form-check-input ml-lg-3" type="radio" name="tipoMascota" id="mascotaPerro" value="perro" checked>
+                                <label class="form-check-label ml-lg-5" for="mascotaPerro">
+                                Perro
+                                </label>
+                            </div>
+                            <div class="form-check mascota">
+                                <img src="../assets/feliz.svg" class="ml-lg-5" width="40" height="40" alt="gatito">
+                                <input class="form-check-input ml-lg-3" type="radio" name="tipoMascota" id="mascotaGato" value="gato">
+                                <label class="form-check-label ml-lg-5" for="mascotaGato">
+                                Gato
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+
+                    <div class="d-flex modal-t" style="gap: 2em;">
+                        <div class="card" style="width: 30rem;">
+                            <img src="../assets/estandar.jpg" width="50" height="200" class="card-img-top" alt="...">
+                            <div class="card-body" id="ListaEstandar">
+                                <h4>Estandar</h4>
+                                <ul>
+                                    <li>Plato de Agua</li>
+                                    <li>Atención todo el tiempo</li>
+                                    <li>Plato de Croquetas</li>
+                                    <li>Paseo Matutino</li>
+                                </ul>
+                                <button data-dismiss="modal" data-id="1" type="button" class="mt-lg-5 btn btn-primary btn-block" id="estandar">Elegir</button>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 30rem;">
+                            <img src="../assets/especial.jpg" width="50" height="200" class="card-img-top"  alt="...">
+                            <div class="card-body" id="ListaEspecial">
+                                <h4>Especial</h4>
+                                <ul>
+                                    <li>Todo el Paquete Estandar +</li>
+                                    <li>Masaje Relajante</li>
+                                    <li>Limpieza Dental</li>
+                                    <li>Baño</li>
+                                </ul>
+                                <button data-dismiss="modal" data-id="2" type="button" class="mt-lg-5 btn btn-primary btn-block" id="especial">Elegir</button>
+                            </div>
+                        </div>
+                        <div class="card" style="width: 30rem;">
+                            <img src="../assets/premium.jpg" width="50" height="200" class="card-img-top" alt="...">
+                            <div class="card-body" id="ListaPremium">
+                                <h4>Premium</h4>
+                                <ul >
+                                    <li>Paquete Especial +</li>
+                                    <li>Plato de Proteína</li>
+                                    <li>Habitación Climatizada</li>
+                                    <li>Tratamiento de pelaje</li>
+                                </ul>
+                                <button data-dismiss="modal" data-id="3" type="button" class="mt-4 btn btn-primary btn-block" id="premium">Elegir</button>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    
+    </div>
+
+
+
+
+</body>
+    <script src="../app/registro.controller.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+</html>
